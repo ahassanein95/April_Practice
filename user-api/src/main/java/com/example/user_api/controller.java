@@ -46,4 +46,10 @@ public class controller {
         users.removeIf(user -> user.getId() == id);
         return "User with id " + id + " deleted";
     }
+
+    @DeleteMapping("/delete/all/asdfasfdasdfdfasfasdf")
+    public String deleteAllUsers() {
+        users.clear();
+        return "All users have been delete. Current user count = " + users.size();
+    }
 }
